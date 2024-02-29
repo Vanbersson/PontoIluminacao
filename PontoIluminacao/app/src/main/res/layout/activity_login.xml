@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <FrameLayout
+        android:id="@+id/idframelayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text="JCA Sistemas"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/roboto_light"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal|end"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/logosplash"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="SISTEMA PARA GEORREFERENCIAMENTO"
+                android:fontFamily="@font/roboto_thin"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/idlinharlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/idbtn_login_esqueceusenha"
+        app:layout_constraintTop_toBottomOf="@+id/idframelayout"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="22dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idlayoutlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idedt_login_login"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/edt_customizado"
+                android:hint="Login"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionNext"
+                android:inputType="textAutoComplete"
+                android:maxLength="100"
+                android:maxLines="1"
+                android:paddingStart="16dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/idlayoutsenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorAccent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idedt_login_senha"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/edt_customizado"
+                android:hint="Senha"
+                android:fontFamily="@font/roboto_regular"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/idsw_login_manter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Manter conectado"
+            android:fontFamily="@font/roboto_light"
+            android:textAlignment="textEnd"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <Button
+            android:id="@+id/idbtn_login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_customizado_login"
+            android:text="Login"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/idbtn_login_esqueceusenha" />
+
+    <Button
+        android:id="@+id/idbtn_login_esqueceusenha"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Esqueceu a senha"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

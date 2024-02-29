@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SairNovoPontoFragment">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:text="Deseja sair"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="40px"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="Se voçê sair agora suas informáções serão perdidas."
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorPrimaryText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/Idbtn_ponto_cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:text="Cancelar"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/Idbtn_ponto_sair"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:text="Sair"
+                android:fontFamily="@font/roboto_regular"
+                android:textColor="@color/colorPrimaryDark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
